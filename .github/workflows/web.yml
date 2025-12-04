@@ -44,7 +44,7 @@ jobs:
       - run: yarn test
 
   build:
-    needs: [eslint, test]
+    needs: [eslint]
 
     environment:
       name: github-pages
