@@ -1,0 +1,144 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: #f5f7fa;
+  padding: 20px;
+}
+
+.board {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.column {
+  background: #ebecf0;
+  border-radius: 3px;
+  width: 272px;
+  padding: 8px;
+}
+
+.column h2 {
+  padding: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  color: #172b4d;
+}
+
+.cards {
+  min-height: 20px;
+  padding: 4px 0;
+}
+
+.card {
+  background: white;
+  border-radius: 3px;
+  padding: 8px;
+  margin-bottom: 8px;
+  cursor: grab;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.12);
+  position: relative;
+}
+
+.card.dragging {
+  cursor: grabbing !important;
+  opacity: 0.7;
+}
+
+.delete-icon {
+  position: absolute;
+  top: 4px;
+  right: 4px;
+  font-size: 18px;
+  color: #5e6c84;
+  cursor: pointer;
+  opacity: 0;
+  transition: opacity 0.2s;
+  font-weight: bold;
+}
+
+.card:hover .delete-icon {
+  opacity: 1;
+}
+
+.add-card-btn {
+  background: none;
+  border: none;
+  color: #5e6c84;
+  padding: 8px;
+  width: 100%;
+  text-align: left;
+  cursor: pointer;
+  border-radius: 3px;
+  font-size: 14px;
+}
+
+.add-card-btn:hover {
+  background: rgba(0,0,0,0.05);
+}
+
+.add-card-form {
+  width: 100%;
+  padding: 8px;
+  background: white;
+  border-radius: 3px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.15);
+  margin-bottom: 8px;
+}
+
+.add-card-input {
+  width: 100%;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  padding: 6px;
+  font-family: inherit;
+  font-size: 14px;
+  outline: none;
+  resize: none;
+}
+
+.add-card-input:focus {
+  border-color: #0079bf;
+}
+
+.add-card-actions {
+  display: flex;
+  gap: 8px;
+  margin-top: 8px;
+}
+
+.add-card-save {
+  background: #0079bf;
+  color: white;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 3px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.add-card-save:hover {
+  background: #0060a0;
+}
+
+.add-card-cancel {
+  background: #e4e4e4;
+  border: none;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.add-card-cancel:hover {
+  background: #ccc;
+}
